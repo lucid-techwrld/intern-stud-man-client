@@ -39,13 +39,13 @@ export default function Login() {
           <label>Email<input value={ADMIN_EMAIL} readOnly aria-readonly="true" autoComplete="username" /></label>
           <label>Password
             <div className="pw">
-              <input type={show ? 'text' : 'password'} value={password} onChange={(e) => { setPassword(e.target.value); setError(''); }} autoComplete="current-password" placeholder="Your Intern ID" autoFocus />
+              <input type={show ? 'text' : 'password'} value={password} onChange={(e) => { setPassword(e.target.value); setError(''); }} autoComplete="current-password" placeholder="Intern ID" autoFocus />
               <button type="button" className="icon-btn" onClick={() => setShow((v) => !v)} aria-label={show ? 'Hide password' : 'Show password'}>{show ? <EyeOff size={18} /> : <Eye size={18} />}</button>
             </div>
             <span className="err" role="alert">{error}</span>
           </label>
           <button className="btn" disabled={busy}>{busy ? 'Signing in…' : 'Sign in'}</button>
-          <p className="hint">Use your Intern ID as the password.</p>
+          <p className="hint">Use Intern ID as the password.</p>
         </form>
       </section>
     </div>
